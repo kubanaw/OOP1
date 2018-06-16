@@ -15,5 +15,8 @@ public class Main {
         cardBalance.pay();
         creditCard.pay();
 
+        System.out.println(cardBalance.toString());
+        System.out.println(creditCard.toString());
+
     }
 }

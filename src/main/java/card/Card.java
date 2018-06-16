@@ -33,4 +33,9 @@ public class Card {
     public void pay() {
         System.out.println("transaction with card has finished succesfully");
     }
+    @Override
+    public String toString(){
+        return name+" "+number+" "+balance.toString();
+
+    }
 }

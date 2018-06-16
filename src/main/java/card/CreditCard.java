@@ -15,8 +15,16 @@ public class CreditCard extends Card {
     public BigDecimal getCreditLimit() {
         return creditLimit;
     }
-@Override
-    public void pay(){
+
+    @Override
+    public void pay() {
         System.out.println("Transaction with creditcard finished succesfully");
     }
+    @Override
+    public String toString()
+    {
+        return super.toString()+""+creditLimit.toString();    }
+
+
+
 }
