@@ -4,7 +4,7 @@ import javafx.scene.layout.BackgroundImage;
 
 import java.math.BigDecimal;
 
-public class Card {
+public abstract class Card {
 
     //fields:
 
@@ -14,19 +14,16 @@ public class Card {
 
     //constructors:
 
-    public Card() {
-
-    }
 
 
-    public Card(String cardNumber, BigDecimal balance) {
+    protected Card(String cardNumber, BigDecimal balance) {
         this.cardNumber = cardNumber;
         this.balance = BigDecimal.ZERO;
         System.out.println("I am a constructor wit 2 arguments");
 
     }
 
-    public Card(String cardNumber, String name, BigDecimal balance) {
+    protected Card(String cardNumber, String name, BigDecimal balance) {
 
         this(cardNumber, balance);
         this.name = name;
@@ -57,10 +54,7 @@ public class Card {
 
     //methods:
 
-    public void pay(){
-
-        System.out.println("You paid with Visa card!");
-    }
+    public abstract void pay(); //abstract class
 
     @Override
     public String toString() {
