@@ -3,8 +3,8 @@ package com.infoshare.oop.com.infoshare.oop.card;
 import java.math.BigDecimal;
 
 public class Card {
-    protected String name;
-    protected String number;
+    protected final String name;
+    protected final String number;
     protected BigDecimal balance;
 
     public Card(String name, String number) {
@@ -16,7 +16,6 @@ public class Card {
         this(name,number);
         this.balance = balance;
     }
-
 
     public String getName() {
         return name;
@@ -32,6 +31,12 @@ public class Card {
         System.out.println("Platność kartą");
 
     }
+//NADPISANIE metody z klasy OBJECT - toString - i teraz użycie jej w inny sposób:
+    @Override
+    public String toString(){
+        String daneKarty = name + " " + number + " " + balance;
+        return daneKarty;
 
+    }
 
 }

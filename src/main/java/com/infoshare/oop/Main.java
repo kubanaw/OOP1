@@ -28,6 +28,11 @@ public class Main {
         //WYWOŁANIE METODY NA OBIEKCIE PKO
         visa.pay();
         pko.pay();  //PKO to obiekt klasy CreditCard - więc wyświetli "Platnosc karta kredytowa"
+        visa.toString();
+    //WYSWIETLANIE dla obiektu z kalsy Card, masterCard, metody toString, nadpisanej z Object
+        System.out.println(masterCard.toString());
+
+
 
     }
 }
