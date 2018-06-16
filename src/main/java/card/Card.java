@@ -2,20 +2,20 @@ package card;
 
 import java.math.BigDecimal;
 
-public class Card {
+public abstract class Card {
     protected final String name;
     protected final String number;
     protected BigDecimal balance;
 
 
-    public Card(String name, String number) { //konstruktor, nazwa taka jak klasy
+    protected Card(String name, String number) { //konstruktor, nazwa taka jak klasy
         this.name = name;
         this.number = number;
         this.balance = balance.ZERO;
         System.out.println("your card has been created, 2 argm");
     }
 
-    public Card(String name, String number, BigDecimal balance) {
+    protected Card(String name, String number, BigDecimal balance) {
         this(name, number);
         this.balance = balance;
         System.out.println("your card has been created, 3 argm");
@@ -30,9 +30,7 @@ public class Card {
 
     }
 
-    public void pay() {
-        System.out.println("transaction with card has finished succesfully");
-    }
+    public abstract void pay();
     @Override
     public String toString(){
         return name+" "+number+" "+balance.toString();
