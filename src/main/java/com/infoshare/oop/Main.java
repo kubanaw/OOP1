@@ -12,7 +12,7 @@ public class Main {
 
         Card card = new Card("1928938833948", "Kowalski",new BigDecimal(9384883));
 
-        CreditCard creditCard = new CreditCard("Child", "111222333", new BigDecimal(10000), new BigDecimal(100));
+        Card creditCard = new CreditCard("Child", "111222333", new BigDecimal(10000), new BigDecimal(100));
 
         System.out.println("method .pay() in Card class' object:");
         card.pay();
@@ -22,10 +22,15 @@ public class Main {
         System.out.println("Card class object to String: "+card.toString());
         System.out.println("CreditCard class object to String: "+creditCard.toString());
 
-        DebitCard debitCard = new DebitCard("Nowak", "99988887777", new BigDecimal(8886666));
+        Card debitCard = new DebitCard("Nowak", "99988887777", new BigDecimal(8886666));
+
         System.out.println("method .pay() in DebitCard object:");
         debitCard.pay();
         System.out.println("DebitCard class object to String: "+debitCard.toString());
+
+
+
+
 
 
     }
