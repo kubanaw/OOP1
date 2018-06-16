@@ -17,8 +17,12 @@ public class CreditCard extends Card {
     }
 
     @Override
-    public void pay() {
-        System.out.println("Płatność kartą kredytową");
+    public void pay () throws Exception {
+        if (balance.compareTo(BigDecimal.ZERO) <=0) {
+            throw new Exception("Zbyt malo srodkow na koncie aby zaplacic karta kredytowa!");
+        }
+
+        System.out.println("Platnosc karta kredytowa.");
     }
 
     public BigDecimal getCreditLimit() {

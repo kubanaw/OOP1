@@ -2,7 +2,7 @@ package com.infoshare.oop.card;
 
 import java.math.BigDecimal;
 
-public class Card {
+public abstract class Card {
     protected final String name;
     protected final String number;
     protected BigDecimal balance;
@@ -37,7 +37,7 @@ public class Card {
         return balance;
     }
 
-    public void pay(){
-        System.out.println("Płatność kartą");
-    }
+    public abstract void pay() throws Exception;
+
+
 }
