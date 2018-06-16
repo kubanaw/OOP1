@@ -3,8 +3,8 @@ package com.infoshare.oop.card;
 import java.math.BigDecimal;
 
 public class Card {
-    protected String cardName;
-    protected String cardNumber;
+    protected final String cardName;
+    protected final String cardNumber;
     protected BigDecimal balance;
 
     public Card (String cardName, String cardNumber, BigDecimal balance){
@@ -33,6 +33,13 @@ public class Card {
     }
     public void pay (){
         System.out.println("platnosc karta");
+    }
+
+    @Override
+    public String toString() {
+        String daneKarty = cardName + cardNumber + balance;
+        return daneKarty;
+
     }
 }
 

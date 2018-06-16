@@ -3,7 +3,7 @@ package com.infoshare.oop.card;
 import java.math.BigDecimal;
 
 public class CreditCard extends Card {
-    protected String creditLimit;
+    protected final String creditLimit;
 
     public CreditCard (String creditLimit, String cardName, String cardNumber, BigDecimal balance) {
         super(cardName, cardNumber, balance);
@@ -18,5 +18,10 @@ public class CreditCard extends Card {
     }
     public void pay (){
         System.out.println("platnosc karta");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }
