@@ -2,6 +2,7 @@ package com.infoshare.oop;
 
 import com.infoshare.oop.com.infoshare.oop.card.Card;
 import com.infoshare.oop.com.infoshare.oop.card.CreditCard;
+import com.infoshare.oop.com.infoshare.oop.card.DebitCard;
 
 import java.math.BigDecimal;
 
@@ -14,8 +15,9 @@ public class Main {
         //Deklaracja obiektu typu Card o nazwie Visa - Inicjalizacja
         Card visa = new Card("Visa Ultron","3322432423");
         Card masterCard = new Card ("MasterCard","43242432",new BigDecimal("32221144"));
+        //UWAGA! BigDECIMAL - deklarujemy poprzez: new BigDecimal(liczba)
         CreditCard pko = new CreditCard("Visa" , "432432432", new BigDecimal("3111"), new BigDecimal("433"));
-
+        DebitCard debCard = new DebitCard("Debetowa", "32133" ,new BigDecimal(33323), new BigDecimal( 300));
        //WYSWIETLANIE
         System.out.println("Nazwa :"+ visa.getName() );
         System.out.println("Numer :" + visa.getNumber());
@@ -31,8 +33,8 @@ public class Main {
         visa.toString();
     //WYSWIETLANIE dla obiektu z kalsy Card, masterCard, metody toString, nadpisanej z Object
         System.out.println(masterCard.toString());
-
-
-
+    // WYŚWIETLENIE DLA OBIEKTU z KLASY DebitCard.java, metoda toString nadpisana
+        System.out.println("####### Wyswietlanie DebitCard - poprzez nadpisanie toString - zebranie komunikatów");
+        System.out.println(debCard.toString());
     }
 }
