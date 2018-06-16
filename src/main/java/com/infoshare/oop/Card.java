@@ -48,5 +48,9 @@ public class Card {
         System.out.println("Zapłaciłeś kartą");
 
     }
-    
+    @Override
+    public String toString() {
+        String wynik = getSaldo().toString() + " " + getName() + getNumber();
+    return wynik;
+    }
 }
