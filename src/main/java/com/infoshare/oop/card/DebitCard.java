@@ -1,5 +1,7 @@
 package com.infoshare.oop.card;
 
+import com.infoshare.oop.exception.NotEnoughFundsException;
+
 import java.math.BigDecimal;
 
 public class DebitCard extends Card {
@@ -10,9 +12,9 @@ public class DebitCard extends Card {
         super(cardName,cardNumber);
     }
     @Override
-    public void pay() throws Exception {
+    public void pay() throws NotEnoughFundsException {
         if (balance.compareTo(BigDecimal.ZERO) <= 0) {
-            throw new Exception("za malo srodkow na karcie debetowej");
+            throw new NotEnoughFundsException("za malo srodkow na karcie debetowej");
         }
         System.out.println("platnosc karta debetowa");
     }

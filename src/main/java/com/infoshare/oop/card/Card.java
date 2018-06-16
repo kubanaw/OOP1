@@ -1,5 +1,7 @@
 package com.infoshare.oop.card;
 
+import com.infoshare.oop.exception.NotEnoughFundsException;
+
 import java.math.BigDecimal;
 
 public abstract class Card {
@@ -32,7 +34,7 @@ public abstract class Card {
     public BigDecimal getBalance() {
         return balance;
     }
-    public abstract void pay () throws Exception;
+    public abstract void pay () throws NotEnoughFundsException;
 
     @Override
     public String toString() {
