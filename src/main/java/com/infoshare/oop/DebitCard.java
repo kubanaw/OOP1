@@ -13,7 +13,7 @@ public class DebitCard extends Card {
     }
 
     public DebitCard(String cardName, String cardNumber, BigDecimal saldo, BigDecimal limitkartydebetowej) {
-        this(cardName, cardNumber, saldo);
+        super(cardName, cardNumber, saldo);
         this.limitkartydebetowej = limitkartydebetowej;
 
         System.out.println("Utworzyłeś kartę debetową");
