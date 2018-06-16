@@ -14,26 +14,33 @@ public class Card {
 
     //constructors:
 
-    public Card(){
+    public Card() {
 
     }
 
 
-    public Card (String cardNumber, BigDecimal balance){
-        this.cardNumber =cardNumber;
-        balance =BigDecimal.ZERO;
-        System.out.println("I am a constructor!");
+    public Card(String cardNumber, BigDecimal balance) {
+        this.cardNumber = cardNumber;
+        balance = BigDecimal.ZERO;
+        System.out.println("I am a constructor wit 2 arguments");
 
     }
 
-    public Card (String cardNumber, String name, BigDecimal balance){
+    public Card(String cardNumber, String name, BigDecimal balance) {
 
-        this (cardNumber, balance);
-        this.name =name;
+        this(cardNumber, balance);
+        this.name = name;
+        System.out.println("I am constructor with 3 arguments");
     }
 
-public String getName() {
+    //getters and setters:
+
+    public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCardNumber() {
@@ -44,7 +51,14 @@ public String getName() {
         this.cardNumber = cardNumber;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    //methods:
+
+    public void pay(){
+
+        System.out.println("You paid with Visa card!");
     }
 }
