@@ -1,5 +1,7 @@
 package card;
 
+import exeption.NotEnoughFundsExeption;
+
 import java.math.BigDecimal;
 
 public abstract class Card {
@@ -30,7 +32,7 @@ public abstract class Card {
 
     }
 
-    public abstract void pay();
+    public abstract void pay() throws NotEnoughFundsExeption;
     @Override
     public String toString(){
         return name+" "+number+" "+balance.toString();

@@ -1,5 +1,7 @@
 package card;
 
+import exeption.NotEnoughFundsExeption;
+
 import java.math.BigDecimal;
 
 public class DebitCard extends Card{
@@ -15,7 +17,11 @@ public class DebitCard extends Card{
         System.out.println("Debit card was created");
     }
 
-    public void pay() {
+    public void pay() throws NotEnoughFundsExeption {
+        if (balance.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new NotEnoughFundsExeption("Not enouch money on your Debit card");
+        }
+
         System.out.println("Debitcard transaction was created");
     }
 

@@ -1,5 +1,7 @@
 package card;
 
+import exeption.NotEnoughFundsExeption;
+
 import java.math.BigDecimal;
 
 public class CreditCard extends Card {
@@ -17,7 +19,11 @@ public class CreditCard extends Card {
     }
 
     @Override
-    public void pay() {
+    public void pay() throws NotEnoughFundsExeption {
+        if (balance.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new NotEnoughFundsExeption("Not enouch money on your CreditCard");
+        }
+
         System.out.println("Transaction with creditcard finished succesfully");
     }
     @Override
