@@ -1,5 +1,7 @@
 package com.infoshare.oop;
 
+import com.infoshare.oop.exception.NotEnoughFundsException;
+
 import java.math.BigDecimal;
 
 public class CreditCard extends Card {
@@ -13,6 +15,20 @@ public class CreditCard extends Card {
 
     public BigDecimal getCreditLimit() {
         return creditLimit;
+    }
+
+    @Override
+    public void pay() throws NotEnoughFundsException {
+        if (saldo.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new NotEnoughFundsException("Brak środków na koncie");
+        }
+        System.out.println("Zapłaciłeś kartą kredytową");
+    }
+
+    @Override
+    public String toString() {
+
+        return super.toString() + " " + creditLimit.toString();
     }
 
 }
