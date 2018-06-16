@@ -18,12 +18,12 @@ public class Main {
         try {
             creditCard.pay();
 
-        }catch (NotEnoughFundsException e) {
+        } catch (NotEnoughFundsException e) {
             System.out.println(e.getMessage());
 
         }
 
-        System.out.println("CreditCard class object to String: "+creditCard.toString());
+        System.out.println("CreditCard class object to String: " + creditCard.toString());
 
         Card debitCard = new DebitCard("Nowak", "99988887777", new BigDecimal(-9));
 
@@ -31,16 +31,20 @@ public class Main {
 
         try {
             debitCard.pay();
-        }catch (NotEnoughFundsException e){
+        } catch (NotEnoughFundsException e) {
             System.out.println(e.getMessage());
 
         }
 
-        System.out.println("DebitCard class object to String: "+debitCard.toString());
+        System.out.println("DebitCard class object to String: " + debitCard.toString());
+
+        /*try {
+            debitCard.pay();
+        } catch (NotEnoughFundsException e) {
+            throw new IllegalStateException("Message", e);
 
 
-
-
+        }*/
 
 
     }

@@ -9,12 +9,11 @@ public abstract class Card {
 
     //fields:
 
-    protected  String name;
-    protected   String cardNumber;
-    protected   BigDecimal balance;
+    protected String name;
+    protected String cardNumber;
+    protected BigDecimal balance;
 
     //constructors:
-
 
 
     protected Card(String cardNumber, String name) {
@@ -60,7 +59,7 @@ public abstract class Card {
     @Override
     public String toString() {
 
-        return name+", "+cardNumber+", "+balance.toString();
+        return name + ", " + cardNumber + ", " + balance.toString();
 
     }
 }

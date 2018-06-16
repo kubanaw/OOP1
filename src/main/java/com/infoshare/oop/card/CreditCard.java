@@ -29,17 +29,18 @@ public class CreditCard extends Card {
 
 
     @Override
-    public void pay () throws NotEnoughFundsException {
-        if(balance.compareTo(BigDecimal.ZERO)<0){
+    public void pay() throws NotEnoughFundsException {
+        if (balance.compareTo(BigDecimal.ZERO) < 0) {
             throw new NotEnoughFundsException("Your balance on credit card is under 0");
         }
         System.out.println("You paid with Visa CREDIT card!");
 
     }
+
     @Override
 
-    public String toString(){
+    public String toString() {
 
-        return super.toString()+", "+" limit: "+creditLimit.toString();
+        return super.toString() + ", " + " limit: " + creditLimit.toString();
     }
 }
