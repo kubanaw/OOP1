@@ -29,7 +29,6 @@ public abstract class Card {
 
     public abstract void pay();
 
-
 //NADPISANIE metody z klasy OBJECT - toString - i teraz użycie jej w inny sposób:
     @Override
     public String toString(){

@@ -17,9 +17,9 @@ public class DebitCard extends Card {
         return komunikat;
 
     }
-//    @Override
-//    public void pay(){
-//        System.out.println("Platność kartą debetową");
-//    }
+    @Override
+     public void pay(){
+        System.out.println("Platność kartą debetową");
+    }
 
 }
