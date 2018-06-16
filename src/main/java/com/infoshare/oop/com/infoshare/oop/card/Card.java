@@ -1,11 +1,22 @@
 package com.infoshare.oop.com.infoshare.oop.card;
 
 public class Card {
-    protected String CardName;
+    protected String name;
+    protected String number;
 
-    public Card(String CardName) {
-        this.CardName = "Visa";
+    public String getName() {
+        return name;
     }
 
+    public String getNumber() {
+        return number;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 }

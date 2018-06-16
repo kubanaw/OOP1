@@ -8,5 +8,10 @@
     <artifactId>OOP1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties/>
+    <property>
+        <exec.mainClass>com.infoshare.oop.Main</exec.mainClass>
+    </property>
+    <properties/>
 
 </project>
