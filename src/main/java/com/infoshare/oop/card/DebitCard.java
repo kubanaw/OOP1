@@ -10,7 +10,10 @@ public class DebitCard extends Card {
         super(cardName,cardNumber);
     }
     @Override
-    public void pay() {
+    public void pay() throws Exception {
+        if (balance.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new Exception("za malo srodkow na karcie debetowej");
+        }
         System.out.println("platnosc karta debetowa");
     }
 }

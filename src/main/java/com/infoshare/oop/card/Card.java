@@ -2,19 +2,20 @@ package com.infoshare.oop.card;
 
 import java.math.BigDecimal;
 
-public class Card {
+public abstract class Card {
     protected final String cardName;
     protected final String cardNumber;
     protected BigDecimal balance;
 
-    public Card (String cardName, String cardNumber, BigDecimal balance){
+    protected  Card (String cardName, String cardNumber, BigDecimal balance){
        this(cardName, cardNumber);
         this.balance = balance;
     }
 
-    public Card (String cardName, String cardNumber)  {
+    protected Card (String cardName, String cardNumber)  {
         this.cardName = cardName;
         this.cardNumber = cardNumber;
+        this.balance = BigDecimal.ZERO;
         System.out.println("CARD INIT");
 
     }
@@ -31,9 +32,7 @@ public class Card {
     public BigDecimal getBalance() {
         return balance;
     }
-    public void pay (){
-        System.out.println("platnosc karta");
-    }
+    public abstract void pay () throws Exception;
 
     @Override
     public String toString() {

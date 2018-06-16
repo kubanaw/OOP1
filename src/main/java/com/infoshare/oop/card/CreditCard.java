@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class CreditCard extends Card {
     protected final String creditLimit;
 
-    public CreditCard (String creditLimit, String cardName, String cardNumber, BigDecimal balance) {
+    public CreditCard(String creditLimit, String cardName, String cardNumber, BigDecimal balance) {
         super(cardName, cardNumber, balance);
         this.creditLimit = creditLimit;
         System.out.println("Zadanie 3");
@@ -16,9 +16,14 @@ public class CreditCard extends Card {
     public BigDecimal getBalance() {
         return super.getBalance();
     }
-    public void pay (){
-        System.out.println("platnosc karta");
+@Override
+    public void pay() throws Exception {
+        if (balance.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new Exception("za malo srodkow na karcie kredytowej");
+        }
+        System.out.println("platnosc karta kredytowa");
     }
+
 
     @Override
     public String toString() {
