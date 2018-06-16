@@ -27,8 +27,7 @@ public class Main {
         System.out.println((pko.getCreditLimit() + " "));
         //WYWOŁANIE METODY NA OBIEKCIE PKO
         visa.pay();
-        pko.pay();
-
+        pko.pay();  //PKO to obiekt klasy CreditCard - więc wyświetli "Platnosc karta kredytowa"
 
     }
 }
