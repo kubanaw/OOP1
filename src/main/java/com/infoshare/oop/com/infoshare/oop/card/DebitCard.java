@@ -18,7 +18,10 @@ public class DebitCard extends Card {
 
     }
     @Override
-     public void pay(){
+    public void pay() throws Exception  {
+        if (balance.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new Exception("Zbyt mało środków na koncie do wykonania platności Karta Debetowa!");
+        }
         System.out.println("Platność kartą debetową");
     }
 

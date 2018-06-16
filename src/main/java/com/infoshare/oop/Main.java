@@ -17,8 +17,8 @@ public class Main {
       //  Card masterCard = new Card ("MasterCard","43242432",new BigDecimal("32221144"));
         //UWAGA! BigDECIMAL - deklarujemy poprzez: new BigDecimal(liczba)
 
-        Card pko = new CreditCard("Visa" , "432432432", new BigDecimal("3111"), new BigDecimal("433"));
-        Card debCard = new DebitCard("Debetowa", "32133" ,new BigDecimal(33323), new BigDecimal( 300));
+        Card pko = new CreditCard("Visa" , "432432432", new BigDecimal("-111"), new BigDecimal("433"));
+        Card debCard = new DebitCard("Debetowa", "32133" ,new BigDecimal(-330), new BigDecimal( 300));
 
 
         //WYSWIETLANIE
@@ -30,8 +30,25 @@ public class Main {
 //        System.out.println("Rachunek :" + masterCard.getBalance());
 //        //PKO
         //WYWOŁANIE METODY NA OBIEKCIE PKO
-//        visa.pay();
-//        pko.pay();  //PKO to obiekt klasy CreditCard - więc wyświetli "Platnosc karta kredytowa"
+
+        try {
+            pko.pay();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+
+        }
+
+        try {
+            debCard.pay();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        } finally {
+
+        }
+
+
+       // pko.pay();  //PKO to obiekt klasy CreditCard - więc wyświetli "Platnosc karta kredytowa"
 //        visa.toString();
     //WYSWIETLANIE dla obiektu z kalsy Card, masterCard, metody toString, nadpisanej z Object
 //        System.out.println(masterCard.toString());

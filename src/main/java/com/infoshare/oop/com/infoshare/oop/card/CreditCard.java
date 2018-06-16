@@ -8,13 +8,18 @@ public class CreditCard extends Card {
     public CreditCard (String name, String number,BigDecimal balance, BigDecimal creditLimit) {
         super(name,number,balance);
         this.creditLimit = BigDecimal.ZERO;
+
     };
 
     public BigDecimal getCreditLimit() {
         return creditLimit;
         }
+
     @Override
-    public void pay(){
+    public void pay() throws Exception  {
+        if (balance.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new Exception("Zbyt mało środków na koncie do wykonania płatności Karta Kredytową!");
+        }
         System.out.println("Platność kartą kredytową");
     }
 //    @Override                                          ****** DO POPRAWY!
