@@ -25,10 +25,14 @@ public class CreditCard extends Card {
         return creditLimit;
     }
 
-    @Override
 
-    public void pay() {
+    @Override
+    public void pay () throws Exception {
+        if(balance.compareTo(BigDecimal.ZERO)<0){
+            throw new Exception("Your balance on credit card is under 0");
+        }
         System.out.println("You paid with Visa CREDIT card!");
+
     }
     @Override
 

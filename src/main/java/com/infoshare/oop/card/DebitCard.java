@@ -10,25 +10,28 @@ public class DebitCard extends Card{
 
     //constructors (base on Card's constructors):
 
-    public DebitCard (String cardNumber, BigDecimal balance){
+    public DebitCard (String cardNumber, String name){
 
-        super(cardNumber,balance);
+        super(cardNumber,name);
     }
 
 
-    public DebitCard(String name, String cardNumber, BigDecimal balance){
+    public DebitCard(String cardnumber, String name, BigDecimal balance){
 
-        super (cardNumber, name, balance);
+        super (cardnumber, name, balance);
 
     }
 
 
     //methods:
+
     @Override
+    public void pay () throws Exception {
+        if(balance.compareTo(BigDecimal.ZERO)<0){
+            throw new Exception("Your balance on debit card is under 0");
+        }
+        System.out.println("You paid with Visa CREDIT card!");
 
-    public void pay(){
-
-        System.out.println("You paid with Visa DEBIT card!");
     }
 
 

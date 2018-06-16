@@ -16,17 +16,17 @@ public abstract class Card {
 
 
 
-    protected Card(String cardNumber, BigDecimal balance) {
+    protected Card(String cardNumber, String name) {
         this.cardNumber = cardNumber;
-        this.balance = BigDecimal.ZERO;
+        this.name = name;
         System.out.println("I am a constructor wit 2 arguments");
 
     }
 
     protected Card(String cardNumber, String name, BigDecimal balance) {
 
-        this(cardNumber, balance);
-        this.name = name;
+        this(cardNumber, name);
+        this.balance = balance;
         System.out.println("I am constructor with 3 arguments");
     }
 
@@ -54,7 +54,7 @@ public abstract class Card {
 
     //methods:
 
-    public abstract void pay(); //abstract class
+    public abstract void pay() throws Exception; //abstract class
 
     @Override
     public String toString() {

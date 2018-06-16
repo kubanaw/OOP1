@@ -10,18 +10,32 @@ import java.math.BigDecimal;
 public class Main {
     public static void main(String[] args) {
 
-        Card creditCard = new CreditCard("Child", "111222333", new BigDecimal(10000), new BigDecimal(100));
+        Card creditCard = new CreditCard("Child", "111222333", new BigDecimal(-23), new BigDecimal(100));
 
         System.out.println("method .pay() in Card class' object:");
         System.out.println("method .pay() in CreditCard object:");
-        creditCard.pay();
+
+        try {
+            creditCard.pay();
+
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+
+        }
 
         System.out.println("CreditCard class object to String: "+creditCard.toString());
 
-        Card debitCard = new DebitCard("Nowak", "99988887777", new BigDecimal(8886666));
+        Card debitCard = new DebitCard("Nowak", "99988887777", new BigDecimal(-9));
 
         System.out.println("method .pay() in DebitCard object:");
-        debitCard.pay();
+
+        try {
+            debitCard.pay();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+
+        }
+
         System.out.println("DebitCard class object to String: "+debitCard.toString());
 
 
