@@ -8,9 +8,9 @@ public class Card {
 
     //fields:
 
-    protected String name;
-    protected String cardNumber;
-    protected BigDecimal balance;
+    protected  String name;
+    protected   String cardNumber;
+    protected   BigDecimal balance;
 
     //constructors:
 

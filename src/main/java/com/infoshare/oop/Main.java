@@ -2,6 +2,7 @@ package com.infoshare.oop;
 
 import com.infoshare.oop.card.Card;
 import com.infoshare.oop.card.CreditCard;
+import com.infoshare.oop.card.DebitCard;
 import jdk.nashorn.internal.runtime.regexp.joni.ast.CClassNode;
 
 import java.math.BigDecimal;
@@ -18,10 +19,13 @@ public class Main {
         System.out.println("method .pay() in CreditCard object:");
         creditCard.pay();
 
-        System.out.println("Card class object to String:"+card.toString());
-        System.out.println("CreditCard class object to String:"+creditCard.toString());
+        System.out.println("Card class object to String: "+card.toString());
+        System.out.println("CreditCard class object to String: "+creditCard.toString());
 
-
+        DebitCard debitCard = new DebitCard("Nowak", "99988887777", new BigDecimal(8886666));
+        System.out.println("method .pay() in DebitCard object:");
+        debitCard.pay();
+        System.out.println("DebitCard class object to String: "+debitCard.toString());
 
 
     }

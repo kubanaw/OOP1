@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 public class CreditCard extends Card {
 
     //fields
-    protected BigDecimal creditLimit;
+    protected final BigDecimal creditLimit;
 
     //constructors
 
