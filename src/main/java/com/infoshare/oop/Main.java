@@ -18,7 +18,7 @@ public class Main {
         try {
             creditCard.pay();
 
-        }catch (Exception e) {
+        }catch (NotEnoughFundsException e) {
             System.out.println(e.getMessage());
 
         }
@@ -31,7 +31,7 @@ public class Main {
 
         try {
             debitCard.pay();
-        }catch (Exception e){
+        }catch (NotEnoughFundsException e){
             System.out.println(e.getMessage());
 
         }

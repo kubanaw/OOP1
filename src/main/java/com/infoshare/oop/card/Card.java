@@ -1,5 +1,6 @@
 package com.infoshare.oop.card;
 
+import com.infoshare.oop.NotEnoughFundsException;
 import javafx.scene.layout.BackgroundImage;
 
 import java.math.BigDecimal;
@@ -54,7 +55,7 @@ public abstract class Card {
 
     //methods:
 
-    public abstract void pay() throws Exception; //abstract class
+    public abstract void pay() throws NotEnoughFundsException; //abstract class
 
     @Override
     public String toString() {
