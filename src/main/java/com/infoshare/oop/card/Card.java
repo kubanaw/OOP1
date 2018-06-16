@@ -21,7 +21,7 @@ public class Card {
 
     public Card(String cardNumber, BigDecimal balance) {
         this.cardNumber = cardNumber;
-        balance = BigDecimal.ZERO;
+        this.balance = BigDecimal.ZERO;
         System.out.println("I am a constructor wit 2 arguments");
 
     }
@@ -60,5 +60,12 @@ public class Card {
     public void pay(){
 
         System.out.println("You paid with Visa card!");
+    }
+
+    @Override
+    public String toString() {
+
+        return name+", "+cardNumber+", "+balance.toString();
+
     }
 }

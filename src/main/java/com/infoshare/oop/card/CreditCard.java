@@ -10,10 +10,10 @@ public class CreditCard extends Card {
     //constructors
 
 
-    public CreditCard(String name, String cardNumber, BigDecimal balance, BigDecimal creditLimit){
+    public CreditCard(String name, String cardNumber, BigDecimal balance, BigDecimal creditLimit) {
 
-        super (cardNumber, name, balance);
-        this.creditLimit =creditLimit;
+        super(cardNumber, name, balance);
+        this.creditLimit = creditLimit;
         System.out.println("I am a child class constructor!");
     }
 
@@ -27,7 +27,13 @@ public class CreditCard extends Card {
 
     @Override
 
-    public void pay(){
+    public void pay() {
         System.out.println("You paid with Visa CREDIT card!");
+    }
+    @Override
+
+    public String toString(){
+
+        return super.toString()+", "+" limit: "+creditLimit.toString();
     }
 }

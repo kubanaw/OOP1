@@ -18,6 +18,9 @@ public class Main {
         System.out.println("method .pay() in CreditCard object:");
         creditCard.pay();
 
+        System.out.println("Card class object to String:"+card.toString());
+        System.out.println("CreditCard class object to String:"+creditCard.toString());
+
 
 
 
