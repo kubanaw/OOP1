@@ -2,17 +2,17 @@ package com.infoshare.oop.com.infoshare.oop.card;
 
 import java.math.BigDecimal;
 
-public class Card {
+public abstract class Card {
     protected final String name;
     protected final String number;
     protected BigDecimal balance;
 
-    public Card(String name, String number) {
+    protected Card(String name, String number) {
         this.name = name;
         this.number = number;
         this.balance = BigDecimal.ZERO;
     };
-    public Card(String name, String number, BigDecimal balance) {
+    protected Card(String name, String number, BigDecimal balance) {
         this(name,number);
         this.balance = balance;
     }
@@ -27,10 +27,9 @@ public class Card {
         return balance;
     }
 
-    public void pay () {
-        System.out.println("Platność kartą");
+    public abstract void pay();
 
-    }
+
 //NADPISANIE metody z klasy OBJECT - toString - i teraz użycie jej w inny sposób:
     @Override
     public String toString(){
