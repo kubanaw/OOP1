@@ -1,5 +1,7 @@
 package com.infoshare.oop.com.infoshare.oop.card;
 
+import com.infoshare.oop.Exception.NotEnoughFundsException;
+
 import java.math.BigDecimal;
 
 public abstract class Card {
@@ -27,7 +29,7 @@ public abstract class Card {
         return balance;
     }
 
-    public abstract void pay() throws Exception;
+    public abstract void pay() throws NotEnoughFundsException;
 
 //NADPISANIE metody z klasy OBJECT - toString - i teraz użycie jej w inny sposób:
     @Override

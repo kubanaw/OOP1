@@ -1,5 +1,6 @@
 package com.infoshare.oop;
 
+import com.infoshare.oop.Exception.NotEnoughFundsException;
 import com.infoshare.oop.com.infoshare.oop.card.Card;
 import com.infoshare.oop.com.infoshare.oop.card.CreditCard;
 import com.infoshare.oop.com.infoshare.oop.card.DebitCard;
@@ -33,7 +34,7 @@ public class Main {
 
         try {
             pko.pay();
-        } catch (Exception e) {
+        } catch (NotEnoughFundsException e) {
             System.out.println(e.getMessage());
         } finally {
 
@@ -41,11 +42,13 @@ public class Main {
 
         try {
             debCard.pay();
-        } catch (Exception e) {
+        } catch (NotEnoughFundsException e) {
             System.out.println(e.getMessage());
         } finally {
 
         }
+
+
 
 
        // pko.pay();  //PKO to obiekt klasy CreditCard - więc wyświetli "Platnosc karta kredytowa"
