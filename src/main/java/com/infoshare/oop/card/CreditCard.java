@@ -24,4 +24,10 @@ public class CreditCard extends Card {
     public BigDecimal getCreditLimit() {
         return creditLimit;
     }
+
+    @Override
+
+    public void pay(){
+        System.out.println("You paid with Visa CREDIT card!");
+    }
 }
