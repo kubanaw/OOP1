@@ -33,10 +33,12 @@ public class Main {
         }
 
 
-        PrepaidCard kartaprzedplacowa = new PrepaidCard("karta przedplacowa", "12312", BigDecimal.valueOf(532532), CustomerType.KLIENT_INDYWIDUALNY, true);
+        CanTransferTo kartaprzedplacowa = new PrepaidCard("karta przedplacowa", "12312", BigDecimal.valueOf(532532), CustomerType.KLIENT_INDYWIDUALNY, true);
 
         kartadebetowa1.toString();
         kartakredytowa1.toString();
         kartaprzedplacowa.toString();
+        kartaprzedplacowa.transferToCard(BigDecimal.ZERO);
+
     }
 }

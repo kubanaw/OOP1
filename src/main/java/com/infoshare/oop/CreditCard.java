@@ -4,7 +4,7 @@ import com.infoshare.oop.exception.NotEnoughFundsException;
 
 import java.math.BigDecimal;
 
-public class CreditCard extends Card {
+public class CreditCard extends Card  implements CanTransferTo{
     protected BigDecimal creditLimit;
 
     public CreditCard(String cardName, String cardNumber, BigDecimal saldo, BigDecimal creditLimit, CustomerType typklienta) {
@@ -29,6 +29,10 @@ public class CreditCard extends Card {
     public String toString() {
 
         return super.toString() + " " + creditLimit.toString();
+    }
+
+    public void transferToCard(BigDecimal amount) {
+        System.out.println("Na tą kartę można przelać środki");
     }
 
 }
