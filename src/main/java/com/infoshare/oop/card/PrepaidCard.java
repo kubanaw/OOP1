@@ -4,15 +4,15 @@ import com.infoshare.oop.NotEnoughFundsException;
 
 import java.math.BigDecimal;
 
-public class PrepaidClass extends Card implements CanTransferTo {
+public class PrepaidCard extends Card implements CanTransferTo {
 
     //fields
     private boolean gift;
 
     //constructors
 
-    public PrepaidClass(String cardNumber, String name, BigDecimal balance, CustomerType customerType, boolean gift) {
-        super(cardNumber, name, balance, customerType);
+    public PrepaidCard(String cardNumber, String name, BigDecimal balance, CustomerType customerType, String id, boolean gift) {
+        super(cardNumber, name, balance, customerType, id);
         this.gift = gift;
 
     }

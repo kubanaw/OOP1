@@ -5,7 +5,7 @@ import javafx.scene.layout.BackgroundImage;
 
 import java.math.BigDecimal;
 
-public abstract class Card {
+public abstract class Card extends Product {
 
     //fields:
 
@@ -17,7 +17,9 @@ public abstract class Card {
     //constructors:
 
 
-    protected Card(String cardNumber, String name) {
+
+    protected Card(String cardNumber, String name, String id) {
+        super (id);
         this.cardNumber = cardNumber;
         this.name = name;
         this.balance = BigDecimal.ZERO;
@@ -25,9 +27,9 @@ public abstract class Card {
 
     }
 
-    protected Card(String cardNumber, String name, BigDecimal balance, CustomerType customerType) {
+    protected Card(String cardNumber, String name, BigDecimal balance, CustomerType customerType, String id) {
 
-        this(cardNumber, name);
+        this(cardNumber, name, id);
         this.balance = balance;
         this.customerType =customerType;
         System.out.println("I am constructor with 4 arguments");
@@ -62,7 +64,7 @@ public abstract class Card {
     @Override
     public String toString() {
 
-        return "Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance.toString()+", Customer type: "+customerType.toString();
+        return super.toString()+", Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance.toString()+", Customer type: "+customerType.toString();
 
         //we can also without .toString() on balance and customerType:
         //return "Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance+", Customer type: "+customerType;

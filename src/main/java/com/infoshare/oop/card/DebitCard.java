@@ -11,15 +11,15 @@ public class DebitCard extends Card {
 
     //constructors (based on Card's constructors):
 
-    public DebitCard(String cardNumber, String name) {
+    public DebitCard(String cardNumber, String name, String id) {
 
-        super(cardNumber, name);
+        super(cardNumber, name, id);
     }
 
 
-    public DebitCard(String cardnumber, String name, BigDecimal balance, CustomerType customerType) {
+    public DebitCard(String cardnumber, String name, BigDecimal balance, CustomerType customerType, String id) {
 
-        super(cardnumber, name, balance, customerType);
+        super(cardnumber, name, balance, customerType, id);
 
     }
 

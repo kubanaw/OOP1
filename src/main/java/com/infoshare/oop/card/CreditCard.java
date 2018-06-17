@@ -11,9 +11,9 @@ public class CreditCard extends Card implements CanTransferTo{
 
     //constructors
 
-    public CreditCard(String name, String cardNumber, BigDecimal balance, BigDecimal creditLimit, CustomerType customerType) {
+    public CreditCard(String name, String cardNumber, BigDecimal balance, BigDecimal creditLimit, CustomerType customerType, String id) {
 
-        super(cardNumber, name, balance, customerType);
+        super(cardNumber, name, balance, customerType, id);
         this.creditLimit = creditLimit;
         System.out.println("I am a child class constructor!");
     }
