@@ -5,8 +5,8 @@ import com.infoshare.oop.exception.NotEnoughFundsException;
 import java.math.BigDecimal;
 
 public class DebitCard extends Card {
-    public DebitCard (String cardName, String cardNumber, BigDecimal balance){
-        super(cardName,cardNumber,balance);
+    public DebitCard (String cardName, String cardNumber, BigDecimal balance, CustomerType customerType){
+        super(cardName,cardNumber,balance, customerType);
     }
     public DebitCard(String cardName, String cardNumber){
         super(cardName,cardNumber);

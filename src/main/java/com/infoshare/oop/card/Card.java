@@ -8,20 +8,20 @@ public abstract class Card {
     protected final String cardName;
     protected final String cardNumber;
     protected BigDecimal balance;
+    protected CustomerType customerType;
 
-    protected  Card (String cardName, String cardNumber, BigDecimal balance){
+    protected  Card (String cardName, String cardNumber, BigDecimal balance, CustomerType customerType){
        this(cardName, cardNumber);
-        this.balance = balance;
+       this.balance = balance;
+       this.customerType = customerType;
+
     }
 
     protected Card (String cardName, String cardNumber)  {
         this.cardName = cardName;
         this.cardNumber = cardNumber;
-        this.balance = BigDecimal.ZERO;
         System.out.println("CARD INIT");
-
     }
-
 
     public String getCardName() {
         return cardName;
@@ -38,9 +38,10 @@ public abstract class Card {
 
     @Override
     public String toString() {
-        String daneKarty = cardName + cardNumber + balance;
+        String daneKarty = cardName + cardNumber + balance + customerType;
         return daneKarty;
 
     }
+
 }
 

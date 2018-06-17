@@ -1,24 +1,19 @@
 package com.infoshare.oop.card;
 
+
 import com.infoshare.oop.exception.NotEnoughFundsException;
 
 import java.math.BigDecimal;
 
-public class CreditCard extends Card {
-    protected final String creditLimit;
+public class PrepaidCard extends Card {
+    private boolean gift;
 
-    public CreditCard(String creditLimit, String cardName, String cardNumber, BigDecimal balance, CustomerType customerType) {
+    public PrepaidCard(String cardName, String cardNumber, BigDecimal balance, CustomerType customerType, boolean gift){
         super(cardName, cardNumber, balance, customerType);
-        this.creditLimit = creditLimit;
-        System.out.println("Zadanie 3");
-
+        this.gift = gift;
     }
 
     @Override
-    public BigDecimal getBalance() {
-        return super.getBalance();
-    }
-@Override
     public void pay() throws NotEnoughFundsException {
         if (balance.compareTo(BigDecimal.ZERO) <= 0) {
             throw new NotEnoughFundsException("za malo srodkow na karcie kredytowej");
@@ -26,9 +21,15 @@ public class CreditCard extends Card {
         System.out.println("platnosc karta kredytowa");
     }
 
-
     @Override
-    public String toString() {
-        return super.toString();
+    public String toString(){
+        return super.toString() + ", czy jest podarunkiem "+ gift;
+    }
+
+
+
+    public boolean isGift(){
+        return gift;
     }
 }
+
