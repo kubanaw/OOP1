@@ -64,9 +64,22 @@ public class Main {
         //downcasting:
         ((CreditCard) creditCard).transferToCard(BigDecimal.valueOf(1000));
 
+        //anonymous inner class:
+
+        CanTransferTo myPrepaidCard = new CanTransferTo() {
+
+            public void transferToCard(BigDecimal amount) {
+                System.out.println("I am anonymous inner class!");
+
+
+            }
+        };
+
+        myPrepaidCard.transferToCard(BigDecimal.valueOf(100));
 
 
 
 
+git
     }
 }
