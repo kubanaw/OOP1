@@ -11,9 +11,9 @@ public class CreditCard extends Card {
 
     //constructors
 
-    public CreditCard(String name, String cardNumber, BigDecimal balance, BigDecimal creditLimit) {
+    public CreditCard(String name, String cardNumber, BigDecimal balance, BigDecimal creditLimit, CustomerType customerType) {
 
-        super(cardNumber, name, balance);
+        super(cardNumber, name, balance, customerType);
         this.creditLimit = creditLimit;
         System.out.println("I am a child class constructor!");
     }

@@ -17,9 +17,9 @@ public class DebitCard extends Card {
     }
 
 
-    public DebitCard(String cardnumber, String name, BigDecimal balance) {
+    public DebitCard(String cardnumber, String name, BigDecimal balance, CustomerType customerType) {
 
-        super(cardnumber, name, balance);
+        super(cardnumber, name, balance, customerType);
 
     }
 

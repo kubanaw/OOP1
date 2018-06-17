@@ -12,6 +12,7 @@ public abstract class Card {
     protected String name;
     protected String cardNumber;
     protected BigDecimal balance;
+    protected CustomerType customerType;
 
     //constructors:
 
@@ -23,11 +24,12 @@ public abstract class Card {
 
     }
 
-    protected Card(String cardNumber, String name, BigDecimal balance) {
+    protected Card(String cardNumber, String name, BigDecimal balance, CustomerType customerType) {
 
         this(cardNumber, name);
         this.balance = balance;
-        System.out.println("I am constructor with 3 arguments");
+        this.customerType =customerType;
+        System.out.println("I am constructor with 4 arguments");
     }
 
     //getters and setters:

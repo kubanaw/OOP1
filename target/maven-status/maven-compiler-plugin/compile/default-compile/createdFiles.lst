@@ -3,3 +3,4 @@ com/infoshare/oop/card/CreditCard.class
 com/infoshare/oop/card/Card.class
 com/infoshare/oop/card/DebitCard.class
 com/infoshare/oop/NotEnoughFundsException.class
+com/infoshare/oop/card/CustomerType.class
