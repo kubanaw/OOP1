@@ -18,6 +18,8 @@ public class Main {
         Card pko = new CreditCard("Visa" , "432432432", new BigDecimal("-111"), new BigDecimal("433"), CustomerType.COMPANY);
         Card debCard = new DebitCard("Debetowa", "32133" ,new BigDecimal(-330), new BigDecimal( 300), CustomerType.INDIVIDUAL);
         Card prepaidCard = new PrepaidCard("Prepaid", "44444", new BigDecimal(21) , CustomerType.INDIVIDUAL, true);
+
+      //CanTransferTo prepaidCard = new PrepaidCard("VISA",new BigDecimal(4354), new BigDecimal(44), CustomerType.COMPANY);
       //WYSWIETLANIE
 //        System.out.println("Nazwa :"+ visa.getName() );
 //        System.out.println("Numer :" + visa.getNumber());
@@ -61,6 +63,13 @@ public class Main {
         System.out.println(debCard.toString());
         System.out.println(pko.toString());
         System.out.println(prepaidCard.toString());
+
+        CanTransferTo newObj = new CanTransferTo() {
+            public void transferToCard(BigDecimal amount) {
+                System.out.println("Implement");
+            }
+        };
+
 
     }
 }

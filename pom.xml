@@ -8,10 +8,18 @@
     <artifactId>OOP1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties/>
-    <property>
-        <exec.mainClass>com.infoshare.oop.Main</exec.mainClass>
-    </property>
-    <properties/>
+    <properties>
+        <exec.mainClass>
+            com.infoshare.oop.Main
+        </exec.mainClass>
+        <project.build.sourceEncoding>
+            UTF-8
+        </project.build.sourceEncoding>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+
+        </dependencies>
+    </dependencyManagement>
 
 </project>

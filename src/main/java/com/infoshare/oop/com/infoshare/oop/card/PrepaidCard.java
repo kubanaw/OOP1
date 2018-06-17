@@ -4,7 +4,7 @@ import com.infoshare.oop.Exception.NotEnoughFundsException;
 
 import java.math.BigDecimal;
 
-public class PrepaidCard extends Card {
+public class PrepaidCard extends Card implements CanTransferTo {
 
     /*Deklaracja pryatnego pola*/ private final boolean gift;
 
@@ -30,4 +30,7 @@ public class PrepaidCard extends Card {
     }
 
 
+    public void transferToCard(BigDecimal amount) {
+        System.out.println(" Doładowanie karty PrePaid");
+    }
 }
