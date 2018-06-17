@@ -12,7 +12,7 @@ public abstract class Card {
 
 
     public Card(String name, String number, CustomerType customerType) {
-        System.out.println("Card initialization - constructor with 2 arguments");
+        System.out.println("Card initialization - constructor with 4 arguments");
         this.name = name;
         this.number = number;
         this.balance = BigDecimal.ZERO;

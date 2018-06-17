@@ -2,16 +2,20 @@ package com.infoshare.oop.card;
 
 import com.infoshare.oop.exceptions.NotEnoughFundsException;
 
+import java.awt.datatransfer.Transferable;
 import java.math.BigDecimal;
 
-public class CreditCard extends Card {
+public class CreditCard extends Card implements CanTransferTo {
     private final BigDecimal creditLimit;
 
-    public CreditCard(String name, String number, BigDecimal balance, BigDecimal creditLimit, CustomerType customerType) {
+
+
+    public CreditCard (String name, String number, BigDecimal balance, BigDecimal creditLimit, CustomerType customerType) {
         super(name, number, balance, customerType);
         this.creditLimit = creditLimit;
         System.out.println("Credit card initialization");
     }
+
 
     @Override
     public String toString() {
@@ -25,6 +29,10 @@ public class CreditCard extends Card {
         }
 
         System.out.println("Platnosc karta kredytowa.");
+    }
+
+    public void transferToCard(BigDecimal amount) {
+        System.out.println("doladowanie karty kredytowej");
     }
 
     public BigDecimal getCreditLimit() {
