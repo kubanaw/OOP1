@@ -27,7 +27,8 @@ public class Main {
 
         System.out.println("CreditCard class object to String: " + creditCard.toString());
 
-        Card debitCard = new DebitCard("Nowak", "99988887777", new BigDecimal(-9), CustomerType.INDIVIDUAL);
+        Card debitCard = new DebitCard("Nowak", "99988887777",
+                new BigDecimal(-9), CustomerType.INDIVIDUAL);
 
         System.out.println("method .pay() in DebitCard object:");
 
@@ -47,8 +48,6 @@ public class Main {
 
 
         }*/
-
-
 
 
     }

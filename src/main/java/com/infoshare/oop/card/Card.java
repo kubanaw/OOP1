@@ -20,6 +20,7 @@ public abstract class Card {
     protected Card(String cardNumber, String name) {
         this.cardNumber = cardNumber;
         this.name = name;
+        this.balance = BigDecimal.ZERO;
         System.out.println("I am a constructor wit 2 arguments");
 
     }
@@ -61,7 +62,7 @@ public abstract class Card {
     @Override
     public String toString() {
 
-        return name + ", " + cardNumber + ", " + balance.toString();
+        return "Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance.toString()+", Customer type: "+customerType.toString();
 
     }
 }
