@@ -40,7 +40,5 @@ public class Main {
             System.out.println("Some text of inner class");
             }
         };
-
-
     }
 }
