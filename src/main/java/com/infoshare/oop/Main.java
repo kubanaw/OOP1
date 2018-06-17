@@ -40,5 +40,11 @@ public class Main {
         kartaprzedplacowa.toString();
         kartaprzedplacowa.transferToCard(BigDecimal.ZERO);
 
+        CanTransferTo obiekt =  new CanTransferTo() {
+            public void transferToCard(BigDecimal amount) {
+                System.out.println("Test");
+            }
+        };
+
     }
 }
