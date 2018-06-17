@@ -8,14 +8,18 @@ public abstract class Card {
     protected final String name;
     protected final String number;
     protected BigDecimal balance;
-
-    protected Card(String name, String number) {
+    protected CustomerType customerType; //DODATKOWE POLE DLA ENUMA
+// W konstruktorze ( ) wstawiamy nowy parametr: CustomerType customerType
+    protected Card(String name, String number,CustomerType customerType) {
         this.name = name;
         this.number = number;
         this.balance = BigDecimal.ZERO;
+        this.customerType = customerType;
+
+
     };
-    protected Card(String name, String number, BigDecimal balance) {
-        this(name,number);
+    protected Card(String name, String number, BigDecimal balance, CustomerType customerType) {
+        this(name,number,customerType);
         this.balance = balance;
     }
 

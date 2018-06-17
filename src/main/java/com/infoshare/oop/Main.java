@@ -3,6 +3,7 @@ package com.infoshare.oop;
 import com.infoshare.oop.Exception.NotEnoughFundsException;
 import com.infoshare.oop.com.infoshare.oop.card.Card;
 import com.infoshare.oop.com.infoshare.oop.card.CreditCard;
+import com.infoshare.oop.com.infoshare.oop.card.CustomerType;
 import com.infoshare.oop.com.infoshare.oop.card.DebitCard;
 
 import java.math.BigDecimal;
@@ -10,7 +11,7 @@ import java.math.BigDecimal;
 public class Main {
     public static void main (String[] args ) {
         System.out.println("_____________");
-        System.out.println("NOWE KARTY");
+        System.out.println(" NOWE KARTY ");
         System.out.println("-------------");
 
         //Deklaracja obiektu typu Card o nazwie Visa - Inicjalizacja
@@ -18,9 +19,8 @@ public class Main {
       //  Card masterCard = new Card ("MasterCard","43242432",new BigDecimal("32221144"));
         //UWAGA! BigDECIMAL - deklarujemy poprzez: new BigDecimal(liczba)
 
-        Card pko = new CreditCard("Visa" , "432432432", new BigDecimal("-111"), new BigDecimal("433"));
-        Card debCard = new DebitCard("Debetowa", "32133" ,new BigDecimal(-330), new BigDecimal( 300));
-
+        Card pko = new CreditCard("Visa" , "432432432", new BigDecimal("-111"), new BigDecimal("433"), CustomerType.COMPANY);
+        Card debCard = new DebitCard("Debetowa", "32133" ,new BigDecimal(-330), new BigDecimal( 300), CustomerType.INDIVIDUAL);
 
         //WYSWIETLANIE
 //        System.out.println("Nazwa :"+ visa.getName() );
@@ -47,8 +47,6 @@ public class Main {
         } finally {
 
         }
-
-
 
 
        // pko.pay();  //PKO to obiekt klasy CreditCard - więc wyświetli "Platnosc karta kredytowa"

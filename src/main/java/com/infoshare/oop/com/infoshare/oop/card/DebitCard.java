@@ -8,9 +8,9 @@ public class DebitCard extends Card {
 
     private final BigDecimal debtLimit;
 
-    public DebitCard (String name, String number, BigDecimal balance, BigDecimal debtLimit) {
-        super(name, number, balance);
-        this.debtLimit =BigDecimal.ZERO;
+    public DebitCard (String name, String number, BigDecimal balance, BigDecimal debtLimit, CustomerType customerType) {
+        super(name, number, balance, customerType);
+        this.debtLimit = BigDecimal.ZERO;
     }
 
     @Override
