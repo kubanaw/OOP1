@@ -5,7 +5,7 @@ import com.infoshare.oop.exception.NotEnoughFundsException;
 
 import java.math.BigDecimal;
 
-public class PrepaidCard extends Card {
+public class PrepaidCard extends Card implements CanTransferTo {
     private boolean gift;
 
     public PrepaidCard(String cardName, String cardNumber, BigDecimal balance, CustomerType customerType, boolean gift){
@@ -26,7 +26,9 @@ public class PrepaidCard extends Card {
         return super.toString() + ", czy jest podarunkiem "+ gift;
     }
 
-
+    public void transferToCard(BigDecimal amount) {
+        System.out.println("doladowanie prepaid");
+    }
 
     public boolean isGift(){
         return gift;
