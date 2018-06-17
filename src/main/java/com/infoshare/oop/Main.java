@@ -1,10 +1,7 @@
 package com.infoshare.oop;
 
 import com.infoshare.oop.Exception.NotEnoughFundsException;
-import com.infoshare.oop.com.infoshare.oop.card.Card;
-import com.infoshare.oop.com.infoshare.oop.card.CreditCard;
-import com.infoshare.oop.com.infoshare.oop.card.CustomerType;
-import com.infoshare.oop.com.infoshare.oop.card.DebitCard;
+import com.infoshare.oop.com.infoshare.oop.card.*;
 
 import java.math.BigDecimal;
 
@@ -18,11 +15,10 @@ public class Main {
      //   Card visa = new Card("Visa Ultron","3322432423");
       //  Card masterCard = new Card ("MasterCard","43242432",new BigDecimal("32221144"));
         //UWAGA! BigDECIMAL - deklarujemy poprzez: new BigDecimal(liczba)
-
         Card pko = new CreditCard("Visa" , "432432432", new BigDecimal("-111"), new BigDecimal("433"), CustomerType.COMPANY);
         Card debCard = new DebitCard("Debetowa", "32133" ,new BigDecimal(-330), new BigDecimal( 300), CustomerType.INDIVIDUAL);
-
-        //WYSWIETLANIE
+        Card prepaidCard = new PrepaidCard("Prepaid", "44444", new BigDecimal(21) , CustomerType.INDIVIDUAL, true);
+      //WYSWIETLANIE
 //        System.out.println("Nazwa :"+ visa.getName() );
 //        System.out.println("Numer :" + visa.getNumber());
 //       //Reszta - MasterCard z Balance
@@ -48,6 +44,13 @@ public class Main {
 
         }
 
+        try {
+            prepaidCard.pay();
+        } catch (NotEnoughFundsException e) {
+            System.out.println(e.getMessage());
+        } finally {
+
+        }
 
        // pko.pay();  //PKO to obiekt klasy CreditCard - więc wyświetli "Platnosc karta kredytowa"
 //        visa.toString();
@@ -56,7 +59,8 @@ public class Main {
     // WYŚWIETLENIE DLA OBIEKTU z KLASY DebitCard.java, metoda toString nadpisana
         System.out.println("####### Wyswietlanie DebitCard - poprzez nadpisanie toString - zebranie komunikatów");
         System.out.println(debCard.toString());
-        System.out.println();
+        System.out.println(pko.toString());
+        System.out.println(prepaidCard.toString());
 
     }
 }
