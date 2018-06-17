@@ -9,7 +9,7 @@ public class DebitCard extends Card {
     //fields:
 
 
-    //constructors (base on Card's constructors):
+    //constructors (based on Card's constructors):
 
     public DebitCard(String cardNumber, String name) {
 
