@@ -53,7 +53,9 @@ public abstract class Card {
 
     @Override
     public String toString() {
-        String wynik = getSaldo().toString() + " " + getName() + getNumber();
+        String wynik = getSaldo().toString() + " " + getName() + getNumber() + typklienta.toString();
         return wynik;
     }
+
+
 }

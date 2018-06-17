@@ -12,12 +12,12 @@ public class Main {
     public static void main(String[] args) {
 
 
-        CreditCard kartakredytowa1 = new CreditCard("Karta kredytowa1", "11213212", BigDecimal.valueOf(0), BigDecimal.valueOf(66665), KLIENT_INDYWIDUALNY);
+        CreditCard kartakredytowa1 = new CreditCard("Karta kredytowa1", "11213212", BigDecimal.valueOf(0), BigDecimal.valueOf(66665), CustomerType.KLIENT_INDYWIDUALNY);
 
 
         System.out.println(kartakredytowa1.toString());
 
-        DebitCard kartadebetowa1 = new DebitCard("Karta debetowa1", "1232121", BigDecimal.valueOf(0), BigDecimal.valueOf(532532), FIRMA);
+        DebitCard kartadebetowa1 = new DebitCard("Karta debetowa1", "1232121", BigDecimal.valueOf(0), BigDecimal.valueOf(532532), CustomerType.FIRMA);
         try {
             kartadebetowa1.pay();
         } catch (NotEnoughFundsException e) {
@@ -32,8 +32,11 @@ public class Main {
 
         }
 
+
+        PrepaidCard kartaprzedplacowa = new PrepaidCard("karta przedplacowa", "12312", BigDecimal.valueOf(532532), CustomerType.KLIENT_INDYWIDUALNY, true);
+
         kartadebetowa1.toString();
-
-
+        kartakredytowa1.toString();
+        kartaprzedplacowa.toString();
     }
 }
