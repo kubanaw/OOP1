@@ -4,7 +4,7 @@ import com.infoshare.oop.NotEnoughFundsException;
 
 import java.math.BigDecimal;
 
-public class PrepaidClass extends Card {
+public class PrepaidClass extends Card implements CanTransferTo {
 
     //fields
     private boolean gift;
@@ -39,6 +39,10 @@ public class PrepaidClass extends Card {
     public String toString(){
         return "Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance+", Customer type: "+customerType+", Has gift: "+gift;
 
+    }
+
+    public void transferToCard(BigDecimal amount){
+        System.out.println("Amount on Prepaid Card: "+amount);
     }
 
 }

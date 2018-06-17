@@ -59,6 +59,11 @@ public class Main {
         }
         System.out.println("PrepaidCard class object to String: " + prepaidClass.toString());
 
+        prepaidClass.transferToCard(BigDecimal.valueOf(700));
+
+        //downcasting:
+        ((CreditCard) creditCard).transferToCard(BigDecimal.valueOf(1000));
+
 
 
 
