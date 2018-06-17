@@ -32,13 +32,12 @@ public abstract class Card {
     public BigDecimal getBalance() {
         return balance;
     }
-
     public abstract void pay() throws NotEnoughFundsException;
 
 //NADPISANIE metody z klasy OBJECT - toString - i teraz użycie jej w inny sposób:
     @Override
     public String toString(){
-        String daneKarty = name + " " + number + " " + balance;
+        String daneKarty = name + " " + number + " " + balance + " " + customerType;
         return daneKarty;
 
     }

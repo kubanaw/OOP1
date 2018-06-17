@@ -15,7 +15,7 @@ public class DebitCard extends Card {
 
     @Override
     public String toString(){
-        String komunikat = "Platnosc karta debetową: " + name + " " + number + " " + balance + " " + debtLimit;
+        String komunikat = "Platnosc karta debetową: " +  debtLimit + " " + super.toString();
         return komunikat;
 
     }

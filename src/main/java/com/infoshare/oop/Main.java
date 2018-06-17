@@ -56,5 +56,7 @@ public class Main {
     // WYŚWIETLENIE DLA OBIEKTU z KLASY DebitCard.java, metoda toString nadpisana
         System.out.println("####### Wyswietlanie DebitCard - poprzez nadpisanie toString - zebranie komunikatów");
         System.out.println(debCard.toString());
+        System.out.println();
+
     }
 }

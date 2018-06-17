@@ -18,16 +18,20 @@ public class CreditCard extends Card {
         }
 
     @Override
+    public String toString() {
+        String komunikat2 = "Platnosc karta Kredytowa: " + creditLimit + " " + super.toString();
+        return komunikat2;
+
+    }
+
+    @Override
     public void pay() throws NotEnoughFundsException {
         if (balance.compareTo(BigDecimal.ZERO) <= 0) {
             throw new NotEnoughFundsException("Zbyt mało środków na koncie do wykonania płatności Karta Kredytową!");
         }
         System.out.println("Platność kartą kredytową");
     }
-//    @Override                                          ****** DO POPRAWY!
-//    public String super toString(){
-//        String daneKarty = creditLimit;
-//        return super daneKarty;
-//
+
+
 
 }
