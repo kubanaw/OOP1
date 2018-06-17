@@ -11,9 +11,9 @@ public class DebitCard extends Card{
         System.out.println("debitcard with 2 args was created");
     }
 
-    public DebitCard(String name, String number, BigDecimal balance){
+    public DebitCard(String name, String number, BigDecimal balance, CustomerType customerType){
 
-       super (name, number, balance);
+       super (name, number, balance, customerType);
         System.out.println("Debit card was created");
     }
 

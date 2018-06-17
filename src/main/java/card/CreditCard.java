@@ -8,8 +8,8 @@ public class CreditCard extends Card {
 
     protected final BigDecimal creditLimit;
 
-    public CreditCard(String name, String number, BigDecimal balance, BigDecimal creditLimit) {
-        super(name, number, balance);
+    public CreditCard(String name, String number, BigDecimal balance, BigDecimal creditLimit, CustomerType customerType) {
+        super(name, number, balance, customerType);
         this.creditLimit = creditLimit;
         System.out.println("Twoja karta kredytowa");
     }
