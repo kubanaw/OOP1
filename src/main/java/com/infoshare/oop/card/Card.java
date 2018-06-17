@@ -8,23 +8,32 @@ public abstract class Card {
     protected final String name;
     protected final String number;
     protected BigDecimal balance;
+    protected CustomerType customerType;
 
-    public Card(String name, String number) {
+
+    public Card(String name, String number, CustomerType customerType) {
         System.out.println("Card initialization - constructor with 2 arguments");
         this.name = name;
         this.number = number;
         this.balance = BigDecimal.ZERO;
+        this.customerType = customerType;
+
     }
 
-    public Card(String name, String number, BigDecimal balance) {
-        this(name, number);
+
+
+    public Card(String name, String number, BigDecimal balance, CustomerType customerType) {
+        this(name, number, customerType);
         this.balance = balance;
-        System.out.println("Card initialization - constructor with 3 arguments");
+
+        System.out.println("Card initialization - constructor with 4 arguments");
     }
+
+
 
     @Override
     public String toString() {
-        return name + ", " + "number: " + number + ", balance: " + balance + "zł";
+        return name + ", " + "number: " + number + ", balance: " + balance + "zł, typ klienta: " + customerType;
     }
 
     public String getName() {
