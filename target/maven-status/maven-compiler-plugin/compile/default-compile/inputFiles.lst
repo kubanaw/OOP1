@@ -3,4 +3,5 @@
 /home/strychson/Dokumenty/maven/infoshare-oop/src/main/java/com/infoshare/oop/card/CreditCard.java
 /home/strychson/Dokumenty/maven/infoshare-oop/src/main/java/com/infoshare/oop/card/DebitCard.java
 /home/strychson/Dokumenty/maven/infoshare-oop/src/main/java/com/infoshare/oop/card/Card.java
+/home/strychson/Dokumenty/maven/infoshare-oop/src/main/java/com/infoshare/oop/card/PrepaidClass.java
 /home/strychson/Dokumenty/maven/infoshare-oop/src/main/java/com/infoshare/oop/NotEnoughFundsException.java

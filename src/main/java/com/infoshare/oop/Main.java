@@ -1,9 +1,6 @@
 package com.infoshare.oop;
 
-import com.infoshare.oop.card.Card;
-import com.infoshare.oop.card.CreditCard;
-import com.infoshare.oop.card.CustomerType;
-import com.infoshare.oop.card.DebitCard;
+import com.infoshare.oop.card.*;
 import jdk.nashorn.internal.runtime.regexp.joni.ast.CClassNode;
 
 import java.math.BigDecimal;
@@ -48,6 +45,22 @@ public class Main {
 
 
         }*/
+
+        PrepaidClass prepaidClass = new PrepaidClass("283782728", "Kierepka",
+                new BigDecimal(87737), CustomerType.COMPANY, true);
+
+        System.out.println("method .pay() in PrepaidCard object:");
+
+        try {
+            prepaidClass.pay();
+        } catch (NotEnoughFundsException e) {
+            System.out.println(e.getMessage());
+
+        }
+        System.out.println("PrepaidCard class object to String: " + prepaidClass.toString());
+
+
+
 
 
     }

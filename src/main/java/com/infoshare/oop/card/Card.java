@@ -64,5 +64,8 @@ public abstract class Card {
 
         return "Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance.toString()+", Customer type: "+customerType.toString();
 
+        //we can also without .toString() on balance and customerType:
+        //return "Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance+", Customer type: "+customerType;
+
     }
 }
