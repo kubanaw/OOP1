@@ -7,8 +7,8 @@ import java.math.BigDecimal;
 public class CreditCard extends Card {
     protected BigDecimal creditLimit;
 
-    public CreditCard(String cardName, String cardNumber, BigDecimal saldo, BigDecimal creditLimit) {
-        super(cardName, cardNumber, saldo);
+    public CreditCard(String cardName, String cardNumber, BigDecimal saldo, BigDecimal creditLimit, CustomerType typklienta) {
+        super(cardName, cardNumber, saldo, typklienta);
         this.creditLimit = creditLimit;
         System.out.println("Utworzyłeś kartę kredytową");
     }

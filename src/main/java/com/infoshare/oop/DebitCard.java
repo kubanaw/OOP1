@@ -8,14 +8,14 @@ public class DebitCard extends Card {
 
     public BigDecimal limitkartydebetowej;
 
-    public DebitCard(String cardName, String cardNumber, BigDecimal saldo) {
-        super(cardName, cardNumber, saldo);
+    public DebitCard(String cardName, String cardNumber, BigDecimal saldo, CustomerType typklienta) {
+        super(cardName, cardNumber, saldo, typklienta);
 
         System.out.println("Utworzyłeś kartę debetową");
     }
 
-    public DebitCard(String cardName, String cardNumber, BigDecimal saldo, BigDecimal limitkartydebetowej) {
-        super(cardName, cardNumber, saldo);
+    public DebitCard(String cardName, String cardNumber, BigDecimal saldo, BigDecimal limitkartydebetowej, CustomerType typklienta) {
+        super(cardName, cardNumber, saldo, typklienta);
         this.limitkartydebetowej = limitkartydebetowej;
 
         System.out.println("Utworzyłeś kartę debetową");

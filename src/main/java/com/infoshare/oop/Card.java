@@ -9,16 +9,18 @@ public abstract class Card {
     protected String cardName;
     protected String cardNumber;
     protected BigDecimal saldo;
+    protected CustomerType typklienta;
 
-    protected Card(String cardName, String cardNumber) {
+    protected Card(String cardName, String cardNumber, CustomerType typklienta) {
         this.cardName = cardName;
         this.cardNumber = cardNumber;
         saldo = BigDecimal.valueOf(0);
+        this.typklienta = typklienta;
         System.out.println("Stworzyłeś nową kartę");
     }
 
-    protected Card(String cardName, String cardNumber, BigDecimal saldo) {
-        this(cardName, cardNumber);
+    protected Card(String cardName, String cardNumber, BigDecimal saldo, CustomerType typklienta) {
+        this(cardName, cardNumber, typklienta);
         this.saldo = saldo;
         System.out.println("Drugi konstruktor");
     }
