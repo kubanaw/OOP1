@@ -6,5 +6,6 @@ com/infoshare/oop/card/Product.class
 com/infoshare/oop/Main$1.class
 com/infoshare/oop/card/CanTransferTo.class
 com/infoshare/oop/card/PrepaidCard.class
+com/infoshare/oop/account/Account.class
 com/infoshare/oop/NotEnoughFundsException.class
 com/infoshare/oop/card/CustomerType.class

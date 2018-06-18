@@ -1,5 +1,6 @@
 package com.infoshare.oop;
 
+import com.infoshare.oop.account.Account;
 import com.infoshare.oop.card.*;
 
 import java.math.BigDecimal;
@@ -63,7 +64,7 @@ public class Main {
         //downcasting:
         ((CreditCard) creditCard).transferToCard(BigDecimal.valueOf(1000));
 
-        //anonymous inner class:
+        //anonymous inner class - exercise 18:
 
         CanTransferTo myPrepaidCard = new CanTransferTo() {
 
@@ -76,8 +77,8 @@ public class Main {
 
         myPrepaidCard.transferToCard(BigDecimal.valueOf(100));
 
-
-
+        Account account = new Account("Karaś", "1111400287737222222", "100");
+        System.out.println(account.toString());
 
 
     }
