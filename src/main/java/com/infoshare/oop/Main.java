@@ -1,6 +1,7 @@
 package com.infoshare.oop;
 
 import com.infoshare.oop.account.Account;
+import com.infoshare.oop.account.SavingAccount;
 import com.infoshare.oop.card.*;
 
 import java.math.BigDecimal;
@@ -79,6 +80,10 @@ public class Main {
 
         Account account = new Account("Karaś", "1111400287737222222", "100");
         System.out.println(account.toString());
+
+        SavingAccount savingAccount = new SavingAccount("Karaś", "11921290921",
+                "100", new BigDecimal(3));
+        System.out.println(savingAccount.toString());
 
 
     }
