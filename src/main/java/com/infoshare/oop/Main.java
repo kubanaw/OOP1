@@ -5,6 +5,7 @@ import com.infoshare.oop.account.SavingAccount;
 import com.infoshare.oop.card.*;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -84,6 +85,24 @@ public class Main {
         SavingAccount savingAccount = new SavingAccount("Karaś", "11921290921",
                 "100", new BigDecimal(3));
         System.out.println(savingAccount.toString());
+
+        //create a product list with different objects (extend from Product class):
+
+        ArrayList<Product> list = new ArrayList<> ();
+        list.add(creditCard);
+        list.add(debitCard);
+        list.add(prepaidCard);
+        list.add(account);
+        list.add(savingAccount);
+
+        //print out all information about objects on Product's list:
+
+        System.out.println("All information about products:");
+
+        for (Product p:list) {
+            System.out.println(p.toString() + "\n");
+
+        }
 
 
     }
