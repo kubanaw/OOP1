@@ -21,6 +21,12 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return "Product ID: "+id;
+
+        //more efficient way is to use StringBuilder
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Product ID: ").append(id).append("\n");
+
+//        return "Product ID: "+id;
+        return stringBuilder.toString();
     }
 }

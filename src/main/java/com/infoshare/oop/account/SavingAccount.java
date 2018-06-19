@@ -23,6 +23,12 @@ public class SavingAccount extends Account {
 
     @Override
     public String toString(){
-        return super.toString()+", Transfer fee is: "+transferFee;
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(super.toString())
+                .append("Transfer fee is: ").append(transferFee).append("\n");
+        return stringBuilder.toString();
+
+//        return super.toString()+", Transfer fee is: "+transferFee;
     }
 }

@@ -40,7 +40,13 @@ public class CreditCard extends Card implements CanTransferTo{
 
     public String toString() {
 
-        return super.toString() + ", " + " limit: " + creditLimit.toString();
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(super.toString())
+                .append("Limit: ").append(creditLimit).append("\n");
+        return stringBuilder.toString();
+
+
+//        return super.toString() + ", " + " limit: " + creditLimit.toString();
     }
 
 

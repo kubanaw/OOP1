@@ -64,7 +64,17 @@ public abstract class Card extends Product {
     @Override
     public String toString() {
 
-        return super.toString()+", Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance.toString()+", Customer type: "+customerType.toString();
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(super.toString())
+                .append("Name: ").append(name).append("\n")
+                .append("Card number: ").append(cardNumber).append("\n")
+                .append("Balance: ").append(balance).append("\n")
+                .append("Customer type: ").append(customerType).append("\n");
+        return stringBuilder.toString();
+
+
+
+//      return super.toString()+", Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance.toString()+", Customer type: "+customerType.toString();
 
         //we can also without .toString() on balance and customerType:
         //return "Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance+", Customer type: "+customerType;

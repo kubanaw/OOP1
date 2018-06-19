@@ -31,6 +31,12 @@ public class Account extends Product {
     @Override
 
     public String toString() {
-        return super.toString()+", Account name: "+name+", Account number: "+number;
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(super.toString())
+                .append("Account name: ").append(name).append("\n")
+                .append("Account number: ").append(number).append("\n");
+        return stringBuilder.toString();
+
+//        return super.toString()+", Account name: "+name+", Account number: "+number;
     }
 }

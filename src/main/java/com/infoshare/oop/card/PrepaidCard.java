@@ -37,7 +37,12 @@ public class PrepaidCard extends Card implements CanTransferTo {
 
     @Override
     public String toString(){
-        return "Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance+", Customer type: "+customerType+", Has gift: "+gift;
+
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(super.toString())
+                .append("Has gift: ").append(gift).append("\n");
+        return stringBuilder.toString();
+//        return "Name: "+name + ", Card number: " + cardNumber + ", Balance: " + balance+", Customer type: "+customerType+", Has gift: "+gift;
 
     }
 
