@@ -1,5 +1,6 @@
 package com.infoshare.oop;
 
+import com.infoshare.oop.account.Account;
 import com.infoshare.oop.card.*;
 import com.infoshare.oop.exception.NotEnoughFundsException;
 
@@ -14,6 +15,7 @@ public class Main {
                 new BigDecimal("500"), CustomerType.INDIVIDUAL);
         CanTransferTo prepaidCard = new PrepaidCard("3", "Karta przedpłacona", "123456",
                 new BigDecimal("150"), CustomerType.INDIVIDUAL, true);
+        Account account = new Account("4", "Malczewski", "34567899876543");
 
 
         try {
@@ -32,6 +34,7 @@ public class Main {
         System.out.println(debitCard.toString());
         System.out.println(creditCard.toString());
         System.out.println(prepaidCard.toString());
+        System.out.println(account.toString());
 
         prepaidCard.transferToCard(BigDecimal.ZERO);
 
