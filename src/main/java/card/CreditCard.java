@@ -10,7 +10,7 @@ public class CreditCard extends Card {
 
     public CreditCard(String name, String number, BigDecimal balance, BigDecimal creditLimit) {
         super(name, number, balance);
-        this.creditLimit = creditLimit;
+        this.creditLimit = creditLimit.ZERO;
         System.out.println("Twoja karta kredytowa");
     }
 

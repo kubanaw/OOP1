@@ -4,13 +4,13 @@ import exeption.NotEnoughFundsExeption;
 
 import java.math.BigDecimal;
 
-public abstract class Card {
-    protected final String name;
+public abstract class Card { //klasa
+    protected final String name; //pole
     protected final String number;
     protected BigDecimal balance;
 
 
-    protected Card(String name, String number) { //konstruktor, nazwa taka jak klasy
+    protected Card(String name, String number) { //konstruktor, nazwa taka jak klasy, String name to parametr
         this.name = name;
         this.number = number;
         this.balance = balance.ZERO;
