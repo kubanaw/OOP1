@@ -4,7 +4,7 @@ import com.infoshare.oop.exception.NotEnoughFundsException;
 
 import java.math.BigDecimal;
 
-public abstract class Card {
+public abstract class Card extends Product{
 
     protected String cardName;
     protected String cardNumber;
